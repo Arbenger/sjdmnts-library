@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import { FaRegTimesCircle as TimesIcon } from "react-icons/fa";
-import { Caption, Container, Content, Display } from "./layouts";
+import { Caption, Container, Content, Display } from "./itemLayout";
 
 export default function ExpiredBooks() {
   return (

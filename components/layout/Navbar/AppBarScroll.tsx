@@ -1,6 +1,5 @@
 import { useScrollTrigger } from "@material-ui/core";
 import { cloneElement, FC, ReactElement } from "react";
-import { PagesWithNavbar } from "./types";
 
 interface AppBarScrollProps {
   children: ReactElement;

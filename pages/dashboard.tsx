@@ -6,7 +6,6 @@ import FeatureOne from "../components/dashboard/FeatureOne";
 
 const Root = styled(Box)({
   width: "calc(100% + 8px)",
-  minHeight: "200vh",
 });
 
 export default function Dashboard() {

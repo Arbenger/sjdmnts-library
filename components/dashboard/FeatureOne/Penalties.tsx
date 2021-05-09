@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import { BiErrorCircle as ErrorIcon } from "react-icons/bi";
-import { Caption, Container, Content, Display } from "./layouts";
+import { Caption, Container, Content, Display } from "./itemLayout";
 
 export default function Penalties() {
   return (

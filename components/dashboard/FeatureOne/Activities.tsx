@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import { RiFlashlightLine as LightningIcon } from "react-icons/ri";
-import { Caption, Container, Content, Display } from "./layouts";
+import { Caption, Container, Content, Display } from "./itemLayout";
 
 export default function Activities() {
   return (
