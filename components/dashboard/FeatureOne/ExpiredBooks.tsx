@@ -1,24 +1,19 @@
-import { Box, Button, Paper, Typography } from "@material-ui/core";
-import { BiErrorCircle as ErrorIcon } from "react-icons/bi";
-import useItemStyles from "./useItemStyles";
+import { Typography } from "@material-ui/core";
+import { FaRegTimesCircle as TimesIcon } from "react-icons/fa";
+import { Caption, Container, Content, Display } from "./layouts";
 
 export default function ExpiredBooks() {
-  const classes = useItemStyles();
-
   return (
-    <Paper className={classes.root}>
-      <Box className={classes.content}>
-        <Box className={classes.caption}>
-          <Typography variant="h4">2</Typography>
+    <Container>
+      <Content>
+        <Caption>
+          <Typography variant="h4">5</Typography>
           <Typography variant="h6">Expired Books</Typography>
-        </Box>
-        <Box className={classes.icon}>
-          <ErrorIcon />
-        </Box>
-      </Box>
-      <Button className={classes.moreInfo} variant="contained">
-        More Info
-      </Button>
-    </Paper>
+        </Caption>
+        <Display>
+          <TimesIcon />
+        </Display>
+      </Content>
+    </Container>
   );
 }

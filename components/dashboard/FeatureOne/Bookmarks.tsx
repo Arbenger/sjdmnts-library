@@ -1,24 +1,19 @@
-import { Box, Button, Paper, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { BiBookBookmark as BookmarksIcon } from "react-icons/bi";
-import useItemStyles from "./useItemStyles";
+import { Caption, Container, Content, Display } from "./layouts";
 
 export default function Bookmarks() {
-  const classes = useItemStyles();
-
   return (
-    <Paper className={classes.root}>
-      <Box className={classes.content}>
-        <Box className={classes.caption}>
-          <Typography variant="h4">15</Typography>
+    <Container>
+      <Content>
+        <Caption>
+          <Typography variant="h4">5</Typography>
           <Typography variant="h6">Bookmarks</Typography>
-        </Box>
-        <Box className={classes.icon}>
+        </Caption>
+        <Display>
           <BookmarksIcon />
-        </Box>
-      </Box>
-      <Button className={classes.moreInfo} variant="contained">
-        More Info
-      </Button>
-    </Paper>
+        </Display>
+      </Content>
+    </Container>
   );
 }

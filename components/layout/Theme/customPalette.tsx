@@ -12,9 +12,9 @@ const customPalette = {
     contrastText: "#ffffff",
   },
   blue: {
-    light: "#5e92f3",
-    main: "#1565c0",
-    dark: "#003c8f",
+    light: "#5472d3",
+    main: "#0d47a1",
+    dark: "#002171",
     contrastText: "#ffffff",
   },
   green: {
@@ -36,15 +36,15 @@ const customPalette = {
     contrastText: "#ffffff",
   },
   orange: {
-    light: "#ff9d3f",
-    main: "#ef6c00",
-    dark: "#b53d00",
+    light: "#ff7543",
+    main: "#d84315",
+    dark: "#9f0000",
     contrastText: "#ffffff",
   },
   yellow: {
-    light: "#ffff6b",
-    main: "#fdd835",
-    dark: "#c6a700",
+    light: "#fff263",
+    main: "#fbc02d",
+    dark: "#c49000",
     contrastText: "#000000",
   },
 };
