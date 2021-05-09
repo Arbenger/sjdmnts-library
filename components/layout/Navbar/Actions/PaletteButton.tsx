@@ -13,7 +13,7 @@ import { BiPalette as PaletteIcon } from "react-icons/bi";
 import { Fragment } from "react";
 import { getCustomPaletteItems } from "components/layout/Theme/functions";
 import { useAppDispatch } from "redux/hooks";
-import { changeCurrentTheme } from "redux/stateSlice";
+import { changeTheme } from "redux/themeSlice";
 import { CustomPaletteItem } from "components/layout/Theme/types";
 
 const useStyles = makeStyles(({ spacing, customPalette }) => {
@@ -63,7 +63,7 @@ export default function PaletteButton() {
   const classes = useStyles();
 
   const handleItemClick = (item: CustomPaletteItem) => {
-    dispatch(changeCurrentTheme(item));
+    dispatch(changeTheme(item));
   };
 
   return (

@@ -27,7 +27,7 @@ export function setCSSRootVariables(theme: CustomPaletteItemProperties) {
   style.setProperty("--theme-contrast-text", theme.contrastText);
 }
 
-export function getStoredCurrentTheme() {
+export function getStoredTheme() {
   try {
     const storedCurrentTheme = localStorage.getItem("data-current-theme");
     const returnedValue = storedCurrentTheme || "blue";
@@ -37,7 +37,7 @@ export function getStoredCurrentTheme() {
   }
 }
 
-export function storeCurrentTheme(theme: CustomPaletteItem) {
+export function storeTheme(theme: CustomPaletteItem) {
   try {
     localStorage.setItem("data-current-theme", theme);
   } catch (error) {

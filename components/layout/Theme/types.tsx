@@ -1,6 +1,7 @@
 import { CSSProperties } from "@material-ui/styles";
 
 export type CustomPaletteItem =
+  | "dark"
   | "blue"
   | "red"
   | "green"

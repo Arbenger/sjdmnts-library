@@ -3,7 +3,7 @@ import { ThemeProvider, createMuiTheme } from "@material-ui/core";
 import { CustomPalette } from "./types";
 import customPalette from "./customPalette";
 import { useAppSelector } from "redux/hooks";
-import { selectCurrentTheme } from "redux/stateSlice";
+import { selectCurrentTheme } from "redux/themeSlice";
 
 declare module "@material-ui/core/styles/createMuiTheme" {
   interface Theme {
