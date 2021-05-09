@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import { Grid, GridSize } from "@material-ui/core";
 import { Container, Wrapper, Title } from "./rootLayout";
 
 import BorrowedBooks from "./BorrowedBooks";
@@ -8,16 +8,42 @@ import Bookmarks from "./Bookmarks";
 import ExpiredBooks from "./ExpiredBooks";
 import Penalties from "./Penalties";
 import Activities from "./Activities";
+import { ReactNode } from "react";
 
 export default function FeatureOne() {
-  const items = [
-    <BorrowedBooks />,
-    <PendingRequests />,
-    <ReturnedBooks />,
-    <Bookmarks />,
-    <ExpiredBooks />,
-    <Penalties />,
-    <Activities />,
+  interface Item {
+    component: ReactNode;
+    sizes: GridSize[];
+  }
+  const items: Item[] = [
+    {
+      component: <BorrowedBooks />,
+      sizes: [12, 6, 4, 3],
+    },
+    {
+      component: <PendingRequests />,
+      sizes: [12, 6, 4, 3],
+    },
+    {
+      component: <ReturnedBooks />,
+      sizes: [12, 6, 4, 3],
+    },
+    {
+      component: <Bookmarks />,
+      sizes: [12, 6, 4, 3],
+    },
+    {
+      component: <ExpiredBooks />,
+      sizes: [12, 6, 4, 4],
+    },
+    {
+      component: <Penalties />,
+      sizes: [12, 6, 4, 4],
+    },
+    {
+      component: <Activities />,
+      sizes: [12, 12, 12, 4],
+    },
   ];
 
   return (
@@ -25,9 +51,16 @@ export default function FeatureOne() {
       <Wrapper maxWidth="lg">
         <Title variant="h4">Dashboard</Title>
         <Grid container spacing={2}>
-          {items.map((item, index) => (
-            <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-              {item}
+          {items.map(({ component, sizes }, index) => (
+            <Grid
+              item
+              key={index}
+              xs={sizes[0]}
+              sm={sizes[1]}
+              md={sizes[2]}
+              lg={sizes[3]}
+            >
+              {component}
             </Grid>
           ))}
         </Grid>

@@ -20,7 +20,7 @@ export const Container = styled(Box)(({ theme }) => {
 export const Wrapper = styled(MuiContainer)({
   height: 500,
   maxHeight: 500,
-  paddingTop: 64,
+  paddingTop: 70,
 });
 
 export const Title = styled(Typography)(({ theme }) => ({
