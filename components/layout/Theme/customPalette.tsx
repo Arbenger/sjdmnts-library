@@ -11,16 +11,40 @@ const customPalette = {
     dark: "#7f0000",
     contrastText: "#ffffff",
   },
+  maroon: {
+    light: "#b73d2a",
+    main: "#800000",
+    dark: "#4f0000",
+    contrastText: "#ffffff",
+  },
   blue: {
     light: "#5472d3",
     main: "#0d47a1",
     dark: "#002171",
     contrastText: "#ffffff",
   },
+  indigo: {
+    light: "#534bae",
+    main: "#1a237e",
+    dark: "#000051",
+    contrastText: "#ffffff",
+  },
   green: {
     light: "#60ad5e",
     main: "#2e7d32",
     dark: "#005005",
+    contrastText: "#ffffff",
+  },
+  lime: {
+    light: "#b4a647",
+    main: "#827717",
+    dark: "#524c00",
+    contrastText: "#ffffff",
+  },
+  brown: {
+    light: "#956e4a",
+    main: "#654321",
+    dark: "#391c00",
     contrastText: "#ffffff",
   },
   purple: {

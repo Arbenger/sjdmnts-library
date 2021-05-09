@@ -3,8 +3,12 @@ import { CSSProperties } from "@material-ui/styles";
 export type CustomPaletteItem =
   | "dark"
   | "blue"
+  | "indigo"
   | "red"
+  | "maroon"
   | "green"
+  | "lime"
+  | "brown"
   | "purple"
   | "pink"
   | "orange"
@@ -22,6 +26,7 @@ export interface CustomPalette {
   dark: CustomPaletteItemProperties;
   red: CustomPaletteItemProperties;
   blue: CustomPaletteItemProperties;
+  indigo: CustomPaletteItemProperties;
   green: CustomPaletteItemProperties;
   purple: CustomPaletteItemProperties;
   pink: CustomPaletteItemProperties;

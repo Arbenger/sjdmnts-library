@@ -9,8 +9,12 @@ export function getCustomPaletteItems() {
   return [
     "dark",
     "red",
+    "maroon",
     "blue",
+    "indigo",
     "green",
+    "lime",
+    "brown",
     "yellow",
     "orange",
     "purple",
