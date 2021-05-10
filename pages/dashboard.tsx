@@ -1,12 +1,13 @@
-import Head from "next/head";
 import { Fragment } from "react";
 import { Box, styled } from "@material-ui/core";
+
+import Head from "next/head";
 import Navbar from "components/layout/Navbar";
 import FeatureOne from "../components/dashboard/FeatureOne";
+import FeatureTwo from "components/dashboard/FeatureTwo";
 
 const Root = styled(Box)({
   width: "calc(100% + 8px)",
-  minHeight: "200vh",
 });
 
 export default function Dashboard() {
@@ -18,6 +19,7 @@ export default function Dashboard() {
       <Root>
         <Navbar pageName="dashboard" />
         <FeatureOne />
+        <FeatureTwo />
       </Root>
     </Fragment>
   );
