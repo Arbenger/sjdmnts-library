@@ -25,7 +25,7 @@ const Theme: FC<Props> = ({ children }) => {
     () =>
       createMuiTheme({
         typography: {
-          fontFamily: "Poppins",
+          fontFamily: "Poppins, Verdana",
         },
         palette: {
           type: currentTheme === "dark" ? "dark" : "light",
