@@ -17,20 +17,20 @@ export default function FeatureOne() {
   }
   const items: Item[] = [
     {
-      component: <BorrowedBooks />,
-      sizes: [12, 6, 4, 3],
+      component: <PendingRequests />,
+      sizes: [12, 12, 6, 6],
     },
     {
-      component: <PendingRequests />,
-      sizes: [12, 6, 4, 3],
+      component: <BorrowedBooks />,
+      sizes: [12, 6, 6, 6],
     },
     {
       component: <ReturnedBooks />,
-      sizes: [12, 6, 4, 3],
+      sizes: [12, 6, 4, 4],
     },
     {
       component: <Bookmarks />,
-      sizes: [12, 6, 4, 3],
+      sizes: [12, 12, 4, 4],
     },
     {
       component: <ExpiredBooks />,
@@ -38,11 +38,11 @@ export default function FeatureOne() {
     },
     {
       component: <Penalties />,
-      sizes: [12, 6, 4, 4],
+      sizes: [12, 6, 6, 6],
     },
     {
       component: <Activities />,
-      sizes: [12, 12, 12, 4],
+      sizes: [12, 12, 6, 6],
     },
   ];
 
