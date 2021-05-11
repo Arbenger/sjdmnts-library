@@ -4,7 +4,11 @@ import { changeAppPalette } from "redux/themeSlice";
 import { ThemeProvider } from "@material-ui/styles";
 import { createMuiTheme, CssBaseline } from "@material-ui/core";
 import { selectTheme } from "redux/selectors";
-import utils from "./appPaletteUtils";
+import {
+  getBaseColor,
+  getPalettesObjectOfObjects,
+  getStoredKey,
+} from "./utils";
 
 interface Props {
   children: ReactNode;
@@ -15,7 +19,7 @@ const ThemeSetter: FC<Props> = ({ children }) => {
   const { appPalette } = useAppSelector(selectTheme);
 
   useEffect(() => {
-    const storedKey = utils.getStoredKey();
+    const storedKey = getStoredKey();
     dispatch(changeAppPalette(storedKey));
   }, []);
 
@@ -26,11 +30,11 @@ const ThemeSetter: FC<Props> = ({ children }) => {
           fontFamily: "Poppins, Verdana",
         },
         palette: {
-          type: utils.getBaseColor(appPalette.current),
+          type: getBaseColor(appPalette.current),
         },
         appPalette: {
           current: appPalette.current,
-          ...utils.getObjectOfPalettes(),
+          ...getPalettesObjectOfObjects(),
         },
       }),
     [appPalette.current]

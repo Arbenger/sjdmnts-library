@@ -1,5 +1,5 @@
 import { Box, IconButton, Typography, makeStyles } from "@material-ui/core";
-import { Icon } from "components/layout/Navbar/Brand/layout";
+import { Icon } from "components/layouts/Navbar/Brand/layout";
 import {
   FiTwitter as TwitterIcon,
   FiFacebook as FacebookIcon,

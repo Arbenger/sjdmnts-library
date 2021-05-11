@@ -1,5 +1,4 @@
 import { Toolbar } from "@material-ui/core";
-import { PagesWithNavbar } from "./types";
 import { FC } from "react";
 import { AppBar } from "./rootLayout";
 
@@ -8,7 +7,7 @@ import Brand from "./Brand";
 import Actions from "./Actions";
 
 interface Props {
-  pageName: PagesWithNavbar;
+  pageName: string;
 }
 
 const Navbar: FC<Props> = ({ pageName }) => {

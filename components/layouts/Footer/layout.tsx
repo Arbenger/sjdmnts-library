@@ -1,5 +1,5 @@
 import { styled, Box } from "@material-ui/core";
-import { brickWall } from "hero-patterns";
+import { jupiter } from "hero-patterns";
 
 export const Container = styled(Box)(({ theme }) => {
   const { appPalette } = theme;
@@ -16,7 +16,7 @@ export const FeatureOneContainer = styled(Box)(({ theme }) => {
 
   return {
     backgroundColor: appPalette[current].main,
-    backgroundImage: brickWall(appPalette[current].contrastText, 0.07),
+    backgroundImage: jupiter(appPalette[current].contrastText, 0.05),
     padding: `${spacing(4)}px ${spacing(1)}px`,
     textAlign: "left",
   };
@@ -28,7 +28,6 @@ export const FeatureTwoContainer = styled(Box)(({ theme }) => {
 
   return {
     backgroundColor: appPalette[current].dark,
-    backgroundImage: brickWall(appPalette[current].contrastText, 0.07),
     textAlign: "center",
     padding: spacing(2),
   };

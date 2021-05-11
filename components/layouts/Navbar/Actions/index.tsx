@@ -1,14 +1,13 @@
 import { FC, Fragment } from "react";
 import { IconButton } from "@material-ui/core";
 import { HiMenuAlt3 as MenuIcon } from "react-icons/hi";
-import { PagesWithNavbar } from "../types";
 import LibraryButton from "./LibraryButton";
 import DashboardButton from "./DashboardButton";
 import AccountButton from "./AccountButton";
 import PaletteButton from "./PaletteButton";
 
 interface Props {
-  pageName: PagesWithNavbar;
+  pageName: string;
 }
 
 const Actions: FC<Props> = ({ pageName }) => {

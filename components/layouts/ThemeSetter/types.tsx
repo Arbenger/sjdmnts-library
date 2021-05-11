@@ -21,6 +21,11 @@ export interface AppPaletteProperties {
   contrastText: CSSProperties["color"];
 }
 
+export interface AppPaletteObject {
+  key: AppPaletteKey;
+  properties: AppPaletteProperties;
+}
+
 export interface AppPalette {
   current: AppPaletteKey;
   dark?: AppPaletteProperties;
@@ -32,11 +37,6 @@ export interface AppPalette {
   pink?: AppPaletteProperties;
   orange?: AppPaletteProperties;
   yellow?: AppPaletteProperties;
-}
-
-export interface AppPaletteObject {
-  key: AppPaletteKey;
-  properties: AppPaletteProperties;
 }
 
 declare module "@material-ui/core/styles/createMuiTheme" {

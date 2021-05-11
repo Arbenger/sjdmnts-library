@@ -20,7 +20,7 @@ export const BackgroundDesign = styled(Box)(({ theme }) => {
   const { current } = appPalette;
 
   return {
-    width: "calc(100% + 8px)",
+    width: "100%",
     height: 480,
     backgroundColor: appPalette[current].main,
     backgroundImage: temple(appPalette[current].contrastText, 0.1),

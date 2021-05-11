@@ -12,9 +12,9 @@ import { Fragment } from "react";
 import { useAppDispatch } from "redux/hooks";
 import { BiPalette as PaletteIcon } from "react-icons/bi";
 import { changeAppPalette } from "redux/themeSlice";
-import { AppPaletteKey } from "components/ThemeSetter/types";
+import { AppPaletteKey } from "components/layouts/ThemeSetter/types";
+import { getKeys } from "components/layouts/ThemeSetter/utils";
 import PopupState, { bindTrigger, bindPopover } from "material-ui-popup-state";
-import utils from "components/ThemeSetter/appPaletteUtils";
 
 const useStyles = makeStyles(({ spacing, appPalette }) => {
   const ITEM_WIDTH = 30,
@@ -23,7 +23,7 @@ const useStyles = makeStyles(({ spacing, appPalette }) => {
     ITEM_BORDER_WIDTH = 4;
 
   const appPalettesStyles = (() => {
-    const keys = utils.getKeys();
+    const keys = getKeys();
     let properties = {};
 
     keys.forEach((item) => {
@@ -60,7 +60,7 @@ export default function PaletteButton() {
   const dispatch = useAppDispatch();
   const theme = useTheme();
   const classes = useStyles();
-  const appPaletteKeys = utils.getKeys();
+  const appPaletteKeys = getKeys();
 
   const handleItemClick = (item: AppPaletteKey) => {
     dispatch(changeAppPalette(item));

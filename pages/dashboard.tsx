@@ -1,28 +1,24 @@
 import { Fragment } from "react";
-import { Box, styled } from "@material-ui/core";
+import { Box } from "@material-ui/core";
+import withLayout from "HOC/withLayout";
 
-import Head from "next/head";
-import Navbar from "components/layout/Navbar";
-import FeatureOne from "../components/dashboard/FeatureOne";
-import FeatureTwo from "components/dashboard/FeatureTwo";
-import Footer from "components/layout/Footer";
+import FeatureOne from "components/pages/Dashboard/FeatureOne";
+import FeatureTwo from "components/pages/Dashboard/FeatureTwo";
 
-const Root = styled(Box)({
-  width: "calc(100% + 8px)",
-});
-
-export default function Dashboard() {
+const Dashboard = () => {
   return (
     <Fragment>
-      <Head>
-        <title>SJDMNTS Library | Dashboard</title>
-      </Head>
-      <Root>
-        <Navbar pageName="dashboard" />
+      <Box>
         <FeatureOne />
         <FeatureTwo />
-        <Footer />
-      </Root>
+      </Box>
     </Fragment>
   );
-}
+};
+
+const config = {
+  pageName: "dashboard",
+  title: "Dashboard",
+};
+
+export default withLayout(Dashboard, config);

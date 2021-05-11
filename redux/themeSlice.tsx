@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AppPaletteKey } from "components/ThemeSetter/types";
-import utils from "../components/ThemeSetter/appPaletteUtils";
+import { AppPaletteKey } from "components/layouts/ThemeSetter/types";
+import { applyKey } from "components/layouts/ThemeSetter/utils";
 
 interface InitialState {
   appPalette: {
@@ -20,7 +20,7 @@ const themeSlice = createSlice({
   reducers: {
     changeAppPalette({ appPalette }, action: PayloadAction<AppPaletteKey>) {
       appPalette.current = action.payload;
-      utils.applyKey(action.payload);
+      applyKey(action.payload);
     },
   },
 });
