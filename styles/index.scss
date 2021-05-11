@@ -4,20 +4,18 @@
   &::-webkit-scrollbar {
     width: 8px;
     height: 8px;
-    background-color: var(--theme-main);
+    background-color: var(--app-palette-main);
   }
   &::-webkit-scrollbar-thumb {
-    background-color: var(--theme-light);
+    background-color: var(--app-palette-light);
     border-radius: 5px;
   }
 }
 
 body {
   overflow-x: hidden;
-  &[data-theme="light"] {
-    background-color: #eeeeee;
-  }
-  &[data-theme="dark"] {
+  background-color: #eeeeee;
+  &[data-is-dark-palettte="true"] {
     background-color: #303030;
   }
 }

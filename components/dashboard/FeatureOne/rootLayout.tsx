@@ -7,23 +7,23 @@ import {
 import { temple } from "hero-patterns";
 
 export const Container = styled(Box)(({ theme }) => {
-  const { customPalette } = theme;
-  const { current } = customPalette;
+  const { appPalette } = theme;
+  const { current } = appPalette;
 
   return {
-    color: customPalette[current].contrastText,
+    color: appPalette[current].contrastText,
   };
 });
 
 export const BackgroundDesign = styled(Box)(({ theme }) => {
-  const { customPalette } = theme;
-  const { current } = customPalette;
+  const { appPalette } = theme;
+  const { current } = appPalette;
 
   return {
     width: "calc(100% + 8px)",
     height: 480,
-    backgroundColor: customPalette[current].main,
-    backgroundImage: temple(customPalette[current].contrastText, 0.1),
+    backgroundColor: appPalette[current].main,
+    backgroundImage: temple(appPalette[current].contrastText, 0.1),
     position: "absolute",
     zIndex: -1,
   };

@@ -1,35 +1,29 @@
-import {
-  setBodyTheme,
-  setCSSRootVariables,
-  storeTheme,
-} from "components/layout/Theme/functions";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { CustomPaletteItem } from "components/layout/Theme/types";
-import customPalette from "components/layout/Theme/customPalette";
-import { RootState } from "./store";
+import { AppPaletteKey } from "components/ThemeSetter/types";
+import utils from "../components/ThemeSetter/appPaletteUtils";
 
 interface InitialState {
-  current: CustomPaletteItem;
+  appPalette: {
+    current: AppPaletteKey;
+  };
 }
 
-const initialState = {
-  current: "blue",
-} as InitialState;
+const initialState: InitialState = {
+  appPalette: {
+    current: "blue",
+  },
+};
 
 const themeSlice = createSlice({
-  name: "state",
+  name: "theme",
   initialState,
   reducers: {
-    changeTheme(state, action: PayloadAction<CustomPaletteItem>) {
-      state.current = action.payload;
-      storeTheme(action.payload);
-      setCSSRootVariables(customPalette[action.payload]);
-      setBodyTheme(action.payload === "dark" ? "dark" : "light");
+    changeAppPalette({ appPalette }, action: PayloadAction<AppPaletteKey>) {
+      appPalette.current = action.payload;
+      utils.applyKey(action.payload);
     },
   },
 });
 
-export const { changeTheme } = themeSlice.actions;
+export const { changeAppPalette } = themeSlice.actions;
 export default themeSlice.reducer;
-
-export const selectCurrentTheme = (state: RootState) => state.theme.current;

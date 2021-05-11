@@ -8,26 +8,26 @@ import {
   Tooltip,
   useTheme,
 } from "@material-ui/core";
-import PopupState, { bindTrigger, bindPopover } from "material-ui-popup-state";
-import { BiPalette as PaletteIcon } from "react-icons/bi";
 import { Fragment } from "react";
-import { getCustomPaletteItems } from "components/layout/Theme/functions";
 import { useAppDispatch } from "redux/hooks";
-import { changeTheme } from "redux/themeSlice";
-import { CustomPaletteItem } from "components/layout/Theme/types";
+import { BiPalette as PaletteIcon } from "react-icons/bi";
+import { changeAppPalette } from "redux/themeSlice";
+import { AppPaletteKey } from "components/ThemeSetter/types";
+import PopupState, { bindTrigger, bindPopover } from "material-ui-popup-state";
+import utils from "components/ThemeSetter/appPaletteUtils";
 
-const useStyles = makeStyles(({ spacing, customPalette }) => {
+const useStyles = makeStyles(({ spacing, appPalette }) => {
   const ITEM_WIDTH = 30,
     ITEM_HEIGHT = ITEM_WIDTH,
     ITEM_BORDER_RADIUS = 5,
     ITEM_BORDER_WIDTH = 4;
 
-  const customPaletteItemsWithProperties = (() => {
-    let items = getCustomPaletteItems(),
-      properties = {};
+  const appPalettesStyles = (() => {
+    const keys = utils.getKeys();
+    let properties = {};
 
-    items.forEach((item) => {
-      const palette = customPalette[item];
+    keys.forEach((item) => {
+      const palette = appPalette[item];
       properties[`&.${item}`] = {
         backgroundColor: palette.main,
         "&:hover, &[data-active='true']": {
@@ -51,19 +51,19 @@ const useStyles = makeStyles(({ spacing, customPalette }) => {
       borderStyle: "solid",
       borderColor: "transparent",
       cursor: "pointer",
-      ...customPaletteItemsWithProperties,
+      ...appPalettesStyles,
     },
   };
 });
 
 export default function PaletteButton() {
-  const theme = useTheme();
   const dispatch = useAppDispatch();
-  const customPaletteItems = getCustomPaletteItems();
+  const theme = useTheme();
   const classes = useStyles();
+  const appPaletteKeys = utils.getKeys();
 
-  const handleItemClick = (item: CustomPaletteItem) => {
-    dispatch(changeTheme(item));
+  const handleItemClick = (item: AppPaletteKey) => {
+    dispatch(changeAppPalette(item));
   };
 
   return (
@@ -92,13 +92,13 @@ export default function PaletteButton() {
           >
             <Paper className={classes.root}>
               <Grid container spacing={1}>
-                {customPaletteItems.map((item) => (
-                  <Grid item key={item}>
-                    <Tooltip title={item} aria-label={item}>
+                {appPaletteKeys.map((key) => (
+                  <Grid item key={key}>
+                    <Tooltip title={key} aria-label={key}>
                       <Box
-                        className={`${classes.paletteItem} ${item}`}
-                        data-active={theme.customPalette.current === item}
-                        onClick={() => handleItemClick(item)}
+                        className={`${classes.paletteItem} ${key}`}
+                        data-active={theme.appPalette.current === key}
+                        onClick={() => handleItemClick(key)}
                       />
                     </Tooltip>
                   </Grid>
