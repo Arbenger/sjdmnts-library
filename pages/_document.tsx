@@ -7,11 +7,11 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="shortcut icon" href="/sjdmnts-logo.png" type="image/png" />
           <meta
             name="description"
             content="San Jose del Monte National Trade School Library Management System. Developed by 12-Aquamarine."
           />
+          <link rel="shortcut icon" href="/sjdmnts-logo.png" type="image/png" />
         </Head>
 
         <body>

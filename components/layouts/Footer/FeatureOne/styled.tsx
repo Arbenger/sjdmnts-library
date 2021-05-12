@@ -1,11 +1,11 @@
 import { styled } from "@material-ui/core";
-import { jupiter } from "hero-patterns";
+import { autumn } from "hero-patterns";
 
 export const RootContainer = styled("div")(
   ({ theme: { appPalette, spacing } }) => ({
     textAlign: "left",
     backgroundColor: appPalette[appPalette.current].main,
-    backgroundImage: jupiter(appPalette[appPalette.current].contrastText, 0.05),
+    backgroundImage: autumn(appPalette[appPalette.current].contrastText, 0.05),
     padding: `${spacing(4)}px ${spacing(1)}px`,
     display: "flex",
     alignItems: "flex-start",

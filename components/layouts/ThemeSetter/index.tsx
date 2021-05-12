@@ -1,4 +1,4 @@
-import { FC, Fragment, ReactNode, useEffect, useMemo } from "react";
+import { Fragment, ReactNode, useEffect, useMemo } from "react";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 import { changeAppPalette } from "redux/themeSlice";
 import { ThemeProvider } from "@material-ui/styles";
@@ -15,7 +15,7 @@ interface Props {
   children: ReactNode;
 }
 
-const ThemeSetter: FC<Props> = ({ children }) => {
+const ThemeSetter = ({ children }: Props) => {
   const dispatch = useAppDispatch();
   const { appPalette } = useAppSelector(selectTheme);
 
