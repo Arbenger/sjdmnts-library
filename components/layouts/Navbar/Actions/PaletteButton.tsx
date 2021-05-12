@@ -17,11 +17,6 @@ import { getKeys } from "components/layouts/ThemeSetter/utils";
 import PopupState, { bindTrigger, bindPopover } from "material-ui-popup-state";
 
 const useStyles = makeStyles(({ spacing, appPalette }) => {
-  const ITEM_WIDTH = 30,
-    ITEM_HEIGHT = ITEM_WIDTH,
-    ITEM_BORDER_RADIUS = 5,
-    ITEM_BORDER_WIDTH = 4;
-
   const appPalettesStyles = (() => {
     const keys = getKeys();
     let properties = {};
@@ -40,14 +35,14 @@ const useStyles = makeStyles(({ spacing, appPalette }) => {
 
   return {
     root: {
-      maxWidth: 152 + 8,
+      maxWidth: 160,
       padding: spacing(1),
     },
     paletteItem: {
-      width: ITEM_WIDTH,
-      height: ITEM_HEIGHT,
-      borderRadius: ITEM_BORDER_RADIUS,
-      borderWidth: ITEM_BORDER_WIDTH,
+      width: 30,
+      height: 30,
+      borderRadius: 5,
+      borderWidth: 4,
       borderStyle: "solid",
       borderColor: "transparent",
       cursor: "pointer",

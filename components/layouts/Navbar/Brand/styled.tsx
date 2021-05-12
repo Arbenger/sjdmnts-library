@@ -1,7 +1,7 @@
 import { Box, styled, Typography } from "@material-ui/core";
 import { BiBookOpen } from "react-icons/bi";
 
-export const Container = styled(Box)({
+export const RootContainer = styled(Box)({
   flexGrow: 1,
 });
 
@@ -13,17 +13,14 @@ export const Content = styled(Box)({
   cursor: "pointer",
 });
 
-export const Icon = styled(BiBookOpen)(({ theme }) => ({
+export const Icon = styled(BiBookOpen)(({ theme: { spacing } }) => ({
   fontSize: 25,
-  marginRight: theme.spacing(1),
+  marginRight: spacing(1),
 }));
 
-export const Title = styled(Typography)({
+export const Title = styled(Typography)(({ theme: { breakpoints } }) => ({
   fontSize: 20,
-  "@media (max-width: 385px)": {
+  [breakpoints.only("xs")]: {
     fontSize: 18,
   },
-  "@media (max-width: 370px)": {
-    fontSize: 16,
-  },
-});
+}));

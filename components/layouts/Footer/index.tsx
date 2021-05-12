@@ -1,12 +1,12 @@
 import FeatureOne from "./FeatureOne";
 import FeatureTwo from "./FeatureTwo";
-import { Container } from "./layout";
+import { RootContainer } from "./styled";
 
 export default function Footer() {
   return (
-    <Container>
+    <RootContainer>
       <FeatureOne />
       <FeatureTwo />
-    </Container>
+    </RootContainer>
   );
 }

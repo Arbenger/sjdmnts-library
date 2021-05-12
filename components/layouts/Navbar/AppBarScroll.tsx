@@ -1,11 +1,11 @@
 import { useScrollTrigger } from "@material-ui/core";
-import { cloneElement, FC, ReactElement } from "react";
+import { cloneElement, ReactElement } from "react";
 
 interface AppBarScrollProps {
   children: ReactElement;
 }
 
-const AppBarScroll: FC<AppBarScrollProps> = ({ children }) => {
+const AppBarScroll = ({ children }: AppBarScrollProps) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 10,

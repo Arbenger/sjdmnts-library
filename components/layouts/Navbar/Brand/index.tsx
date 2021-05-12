@@ -1,15 +1,15 @@
-import { Container, Content, Icon, Title } from "./layout";
+import { RootContainer, Content, Icon, Title } from "./styled";
 import Link from "next/link";
 
 export default function Brand() {
   return (
-    <Container>
+    <RootContainer>
       <Link href="/">
         <Content>
           <Icon />
           <Title>SJDMNTS Library</Title>
         </Content>
       </Link>
-    </Container>
+    </RootContainer>
   );
 }

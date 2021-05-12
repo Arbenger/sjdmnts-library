@@ -1,5 +1,5 @@
 import { Typography } from "@material-ui/core";
-import { FeatureTwoContainer } from "./layout";
+import { FeatureTwoContainer } from "./styled";
 
 export default function FeatureTwo() {
   return (

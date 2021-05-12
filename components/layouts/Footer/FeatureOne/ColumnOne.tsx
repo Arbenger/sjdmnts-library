@@ -1,33 +1,22 @@
-import { Box, IconButton, Typography, makeStyles } from "@material-ui/core";
-import { Icon } from "components/layouts/Navbar/Brand/layout";
+import { IconButton, Typography } from "@material-ui/core";
+import { Icon } from "components/layouts/Navbar/Brand/styled";
+import { ColumnOneContainer } from "./styled";
 import {
   FiTwitter as TwitterIcon,
   FiFacebook as FacebookIcon,
   FiInstagram as InstagramIcon,
 } from "react-icons/fi";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    alignItem: "flex-start",
-    justifyContent: "flex-start",
-    [`@media (max-width: ${theme.breakpoints.values.md}px)`]: {
-      justifyContent: "center",
-    },
-  },
-}));
-
 export default function ColumnOne() {
-  const classes = useStyles();
   return (
-    <Box className={classes.root}>
-      <Box>
-        <Box display="flex" alignItems="center" justifyContent="center">
+    <ColumnOneContainer>
+      <div>
+        <div className="flex-center">
           <Icon />
           <Typography variant="h6">SJDMNTS Library</Typography>
-        </Box>
+        </div>
 
-        <Box display="flex" alignItems="center" justifyContent="center">
+        <div className="flex-center">
           <IconButton edge="start" color="inherit" aria-label="facebook">
             <FacebookIcon />
           </IconButton>
@@ -39,8 +28,8 @@ export default function ColumnOne() {
           <IconButton edge="start" color="inherit" aria-label="instagram">
             <InstagramIcon />
           </IconButton>
-        </Box>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </ColumnOneContainer>
   );
 }

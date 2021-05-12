@@ -1,5 +1,4 @@
 import { ComponentType, Fragment } from "react";
-import { Box } from "@material-ui/core";
 import Head from "next/head";
 import Footer from "components/layouts/Footer";
 import Navbar from "components/layouts/Navbar";
@@ -20,11 +19,11 @@ export default function withLayout<T>(
           <title>SJDMNTS Library | {title}</title>
         </Head>
 
-        <Box id="root-layout">
+        <div id="root-layout">
           <Navbar pageName={pageName} />
           <WrappedComponent {...props} />
           <Footer />
-        </Box>
+        </div>
       </Fragment>
     );
   };

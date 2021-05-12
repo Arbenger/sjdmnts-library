@@ -1,5 +1,6 @@
 import { Grid, Container, Hidden, Divider, Box } from "@material-ui/core";
-import { FeatureOneContainer } from "../layout";
+import { RootContainer } from "./styled";
+
 import ColumnOne from "./ColumnOne";
 import ColumnTwo from "./ColumnTwo";
 import ColumnThree from "./ColumnThree";
@@ -13,7 +14,7 @@ const ItemDivider = () => (
 
 export default function FeatureOne() {
   return (
-    <FeatureOneContainer>
+    <RootContainer>
       <Container maxWidth="lg">
         <Grid container>
           <Grid item lg={1} />
@@ -41,6 +42,6 @@ export default function FeatureOne() {
           </Grid>
         </Grid>
       </Container>
-    </FeatureOneContainer>
+    </RootContainer>
   );
 }

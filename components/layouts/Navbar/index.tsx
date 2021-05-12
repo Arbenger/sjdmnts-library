@@ -1,6 +1,5 @@
 import { Toolbar } from "@material-ui/core";
-import { FC } from "react";
-import { AppBar } from "./rootLayout";
+import { AppBar } from "./styled";
 
 import AppBarScroll from "./AppBarScroll";
 import Brand from "./Brand";
@@ -10,7 +9,7 @@ interface Props {
   pageName: string;
 }
 
-const Navbar: FC<Props> = ({ pageName }) => {
+const Navbar = ({ pageName }: Props) => {
   return (
     <AppBarScroll>
       <AppBar position="fixed">

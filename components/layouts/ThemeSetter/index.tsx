@@ -9,6 +9,7 @@ import {
   getPalettesObjectOfObjects,
   getStoredKey,
 } from "./utils";
+import "./extension";
 
 interface Props {
   children: ReactNode;

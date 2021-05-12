@@ -1,10 +1,10 @@
 import { Typography } from "@material-ui/core";
 import { BiBookBookmark as BookmarksIcon } from "react-icons/bi";
-import { Caption, Container, Content, Display } from "./itemLayout";
+import { Caption, RootContainer, Content, Display } from "./styled";
 
 export default function Bookmarks() {
   return (
-    <Container>
+    <RootContainer>
       <Content>
         <Caption>
           <Typography variant="h4">5</Typography>
@@ -14,6 +14,6 @@ export default function Bookmarks() {
           <BookmarksIcon />
         </Display>
       </Content>
-    </Container>
+    </RootContainer>
   );
 }

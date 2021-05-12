@@ -1,15 +1,12 @@
-import { Box, Paper } from "@material-ui/core";
-import { Container } from "./layout";
+import { LineChartContainer, RootContainer } from "./styled";
 import LineChart from "./LineChart";
 
 export default function FeatureTwo() {
   return (
-    <Container maxWidth="lg">
-      <Paper>
-        <Box height={500}>
-          <LineChart />
-        </Box>
-      </Paper>
-    </Container>
+    <RootContainer maxWidth="lg">
+      <LineChartContainer>
+        <LineChart />
+      </LineChartContainer>
+    </RootContainer>
   );
 }

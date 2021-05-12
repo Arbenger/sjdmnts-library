@@ -1,10 +1,10 @@
 import { Typography } from "@material-ui/core";
 import { RiFlashlightLine as LightningIcon } from "react-icons/ri";
-import { Caption, Container, Content, Display } from "./itemLayout";
+import { Caption, RootContainer, Content, Display } from "./styled";
 
 export default function Activities() {
   return (
-    <Container>
+    <RootContainer>
       <Content>
         <Caption>
           <Typography variant="h4">5</Typography>
@@ -14,6 +14,6 @@ export default function Activities() {
           <LightningIcon />
         </Display>
       </Content>
-    </Container>
+    </RootContainer>
   );
 }

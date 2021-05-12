@@ -1,10 +1,10 @@
 import { Typography } from "@material-ui/core";
 import { IoArrowUndoOutline as UndoIcon } from "react-icons/io5";
-import { Caption, Container, Content, Display } from "./itemLayout";
+import { Caption, RootContainer, Content, Display } from "./styled";
 
 export default function ReturnedBooks() {
   return (
-    <Container>
+    <RootContainer>
       <Content>
         <Caption>
           <Typography variant="h4">5</Typography>
@@ -14,6 +14,6 @@ export default function ReturnedBooks() {
           <UndoIcon />
         </Display>
       </Content>
-    </Container>
+    </RootContainer>
   );
 }

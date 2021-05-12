@@ -1,8 +1,11 @@
 import { RiDashboardLine as DashboardIcon } from "react-icons/ri";
 import { IconButton } from "@material-ui/core";
-import { FC } from "react";
 
-const DashboardButton: FC<{ pageName: string }> = ({ pageName }) => {
+interface Props {
+  pageName: string;
+}
+
+const DashboardButton = ({ pageName }: Props) => {
   return pageName !== "dashboard" ? (
     <IconButton edge="end" color="inherit" aria-label="dashboard">
       <DashboardIcon />
