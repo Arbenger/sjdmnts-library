@@ -1,7 +1,12 @@
 @import "public/poppins/poppins.css";
 @import "utils";
 
-* {
+:root {
+  --base-light: #eeeeee;
+  --base-dark: #303030;
+}
+
+html {
   &::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -15,9 +20,25 @@
 
 body {
   overflow-x: hidden;
-  background-color: #eeeeee;
-  &[data-is-dark-palettte="true"] {
-    background-color: #303030;
+  background-color: var(--base-light);
+  * {
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+      background-color: var(--base-light);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--app-palette-light);
+      border-radius: 5px;
+    }
+  }
+  &[data-is-dark-palette="true"] {
+    background-color: var(--base-dark);
+    * {
+      &::-webkit-scrollbar {
+        background-color: var(--base-dark);
+      }
+    }
   }
 }
 
